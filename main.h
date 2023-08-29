@@ -8,6 +8,7 @@
 char secretword[WORD_LENGHT];
 char guesses[WORD_LENGHT];
 int tries = 0;
+int wrongtries;
 
 void drawgui();
 void chooseword();
