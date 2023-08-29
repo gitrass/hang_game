@@ -81,10 +81,13 @@ void readguess(char guesses[WORD_LENGHT], int* tries){
     printf("--------------\n");
     guesses[(*tries)] = guess;
     (*tries) ++;
+    if(wrongtries == 1){
+        printf("Wrong tries [MÁX. 6]: %d\n", wrongtries);
+    }
 }
 
 int losecheck(){
-    int wrongtries = 0;
+    wrongtries = 0;
     for(int i = 0; i < tries; i++){
         int check = 0;
         for(int j = 0; j < strlen(secretword); j++){
